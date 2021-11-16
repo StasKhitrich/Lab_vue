@@ -15,14 +15,14 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     semi: 0,
-    'comma-dangle': 0,
+    'comma-dangle': 2,
     quotes: 'warn',
     'max-classes-per-file': 0,
     'linebreak-style': 0,
     'class-methods-use-this': 0,
     'no-trailing-spaces': 0,
     'lines-between-class-members': 0,
-				'@typescript-eslint/explicit-module-boundary-types': 'off'
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
   overrides: [
     {
