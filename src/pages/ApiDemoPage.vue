@@ -21,12 +21,12 @@ import { Options, Vue } from 'vue-class-component';
 const lorem = new LoremIpsum({
   sentencesPerParagraph: {
     max: 8,
-    min: 4
+    min: 4,
   },
   wordsPerSentence: {
     max: 16,
-    min: 4
-  }
+    min: 4,
+  },
 });
 
 interface ICategoryDemoData {
@@ -45,7 +45,7 @@ export default class ApiDemoPage extends Vue {
   private async request(path, body, method = 'POST'): Promise<any> {
     const requestInit: any = {
       method,
-      headers: { 'Content-Type': 'application/json' }
+      headers: { 'Content-Type': 'application/json' },
     }
 
     if (body) {
@@ -67,7 +67,7 @@ export default class ApiDemoPage extends Vue {
       title: lorem.generateWords(random()),
       description: lorem.generateSentences(random()),
       createdAt: new Date().getTime().toString(),
-      updatedAt: new Date().getTime().toString()
+      updatedAt: new Date().getTime().toString(),
     }
   }
 
@@ -84,7 +84,7 @@ export default class ApiDemoPage extends Vue {
       return {
         ...category,
         createdAt: `${createdAt.toDateString()} - ${createdAt.toLocaleTimeString()}`,
-        updatedAt: `${updatedAt.toDateString()} - ${updatedAt.toLocaleTimeString()}`
+        updatedAt: `${updatedAt.toDateString()} - ${updatedAt.toLocaleTimeString()}`,
       }
     })
   }
@@ -107,7 +107,7 @@ export default class ApiDemoPage extends Vue {
     const lastCategory = this.demoCategories[0];
     const categoryData = {
       ...this.generateRandomDemoCategoryData(),
-      createdAt: lastCategory.createdAt
+      createdAt: lastCategory.createdAt,
     }
 
     await this.request(`demo-categories/${lastCategory.id}`, categoryData, 'PATCH');
