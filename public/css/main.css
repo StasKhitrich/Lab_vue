@@ -1,18 +1,14 @@
 body{
   padding: 0;
   margin: 0;
-  margin-top: 150px;  
+  margin-top: 150px;      
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;    
+  color: #2c3e50;  
 } 
-
-.container{
-    margin: 0 auto;
-}
 
 a {
   text-decoration: none;  
@@ -48,3 +44,31 @@ a {
   font-weight: bold;
   font-size: 1.5rem;
 }
+
+#footer{
+  background-color: #000;
+  padding: 30px;
+  color: #FFF;    
+  text-align: center;  
+}
+
+#content{  
+  min-height: 55vh;  
+}
+
+.icons{
+  margin: 40px 0;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  display: inline-block;
+  list-style-type: none;
+  width: 40px;
+  margin: 0 10px;
+}
+
