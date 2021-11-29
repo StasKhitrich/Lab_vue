@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1 class="products">Products!</h1>
+    <div class="products">
+        <h1 class="products indicator">Products!</h1>
     </div>
 </template>
 
@@ -9,7 +9,3 @@ export default {
         
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

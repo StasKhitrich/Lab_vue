@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1 class="about">About!</h1>
+    <div class="about">
+        <h1 class="about indicator">About!</h1>
     </div>
 </template>
 
@@ -9,7 +9,3 @@ export default {
         
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

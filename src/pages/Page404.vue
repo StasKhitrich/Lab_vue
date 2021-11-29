@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1 class="error_page">404 Not Found!</h1>
+    <div class="error">
+        <h1 class="error indicator">404 Not Found!</h1>
     </div>
 </template>
 
@@ -9,7 +9,3 @@ export default {
         
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

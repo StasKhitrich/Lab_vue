@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1 class="Home">Home!</h1> 
+    <div class="home">
+        <h1 class="home indicator">Home!</h1> 
     </div>
 </template>
 
@@ -9,7 +9,3 @@ export default {
         
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
