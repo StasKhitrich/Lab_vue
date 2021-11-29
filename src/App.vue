@@ -1,43 +1,48 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <IndexPage :title="userFullName" />
-  <ApiDemoPage />
+<div class="app">
+  <header-navigation/>
+  <div class="main_content">
+    <router-view></router-view>
+  </div>
+  <footer-slogan/>
+</div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import IndexPage from '@/pages/IndexPage.vue';
-import ApiDemoPage from '@/pages/ApiDemoPage.vue';
+import headerNavigation from '@/components/header-nav.vue';
+import footerSlogan from '@/components/footer-slogan.vue'
 
 @Options({
   components: {
-    IndexPage,
-    ApiDemoPage
-  },
+    headerNavigation,
+    footerSlogan  
+  }
 })
 export default class App extends Vue {
-  user: any = null;
-
-  async mounted(): Promise<void> {
-    const resp = await fetch('http://localhost:3000/users/1').then((response) => response.json());
-    this.user = resp || null;
-  }
-
-  get userFullName() {
-    return this.user
-      ? `Default user: ${this.user.first_name} ${this.user.last_name}`
-      : ''
-  }
+  
 }
 </script>
 
 <style lang="scss">
+* {
+  font-family: 'Arial Narrow', sans-serif ;
+}
+h1 {
+    border-bottom: 3px solid #9833CC;
+}
+
+body {
+  height: 100%;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  min-height: 100%;
+  width: 100%;
+}
+
+.main_content {
+  height: 100px;
+  margin-bottom: 20px;
 }
 </style>
