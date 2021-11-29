@@ -21,7 +21,7 @@
 
 <style lang="scss">
 
-header {
+.header {
   background-color: #121212;
   height: 65px;
   vertical-align: middle;
