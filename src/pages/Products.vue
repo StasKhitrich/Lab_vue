@@ -1,6 +1,6 @@
 <template>
     <div class="products">
-        <h1 class="products indicator">Products!</h1>
+        <h1 class="products__content indicator">Products!</h1>
     </div>
 </template>
 

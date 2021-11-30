@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <h1 class="home indicator">Home!</h1> 
+        <h1 class="home__content indicator">Home!</h1> 
     </div>
 </template>
 

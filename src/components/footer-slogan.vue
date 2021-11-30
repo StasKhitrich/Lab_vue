@@ -1,10 +1,12 @@
 <template>
-    <footer>
-        <div class="footer">
-            <div class="footer__slogan">
-                Incredible Convenient
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__slogan">
+                    Incredible Convenient
+                </div>
+                <logos/>
             </div>
-            <logos/>
         </div>
     </footer>
 </template>
@@ -20,8 +22,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.footer {
+.footer__inner {
     position: absolute;
     background-color: black;
     color: #9833CC;

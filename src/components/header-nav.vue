@@ -1,37 +1,39 @@
 <template>
 <header class="header">
-      <div class="nav">
-        <div class="nav__logo">
-          <router-link class="nav__logo__link" to="/">Game Store</router-link>
+  <div class="container">
+    <div class="header__inner">
+        <div class="header__logo">
+          <router-link class="header__logo-link" to="/">Game Store</router-link>
         </div>
-        <nav class="nav__navigation">
-            <router-link class="nav__link" to="/">Home</router-link>
-            <router-link  class="nav__link" to="/products">Products</router-link>
-            <router-link class="nav__link" to="/about">About</router-link>
+        <nav class="header__navigation">
+            <router-link class="header__navigation-link" to="/">Home</router-link>
+            <router-link class="header__navigation-link" to="/products">Products</router-link>
+            <router-link class="header__navigation-link" to="/about">About</router-link>
         </nav>
       </div>
-    </header>
+  </div> 
+</header>
 </template>
+
 <script>
 
 </script>
 
 <style lang="scss">
-
 .header {
   background-color: #121212;
   height: 65px;
   vertical-align: middle;
-}
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 17px 0 17px;
-  height: 100%;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 17px 0 17px;
+    height: 100%;
+  }  
 
-  &__logo__link {
+  &__logo-link {
     font-size: 40px;
     font-weight: 500;
     color: #CECDCE;
@@ -41,20 +43,14 @@
 
     &:hover,
     &:focus {
-      color: #b298be;
+        color: #b298be;
     }
-  }  
+  }   
 
   &__navigation { 
     display: inherit;
 
-    .active {
-      color: #9833CC;
-      height: 60px;
-    }
-  }
-
-  &__link {
+    &-link {
     font-size: 23px;
     font-weight: 500;
     text-decoration: none;
@@ -72,5 +68,11 @@
       color: white;
     }
   }  
+
+    .active {
+      color: #9833CC;
+      height: 60px;
+    }
+  }
 }
 </style>

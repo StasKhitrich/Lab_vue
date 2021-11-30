@@ -1,16 +1,16 @@
 <template>
-    <div class="footer__logos">
-        <a href="https://www.ea.com/" target="_blank" class="footer__logos-item">
+    <div class="footer-logos">
+        <a href="https://www.ea.com/" target="_blank" class="footer-logos__link">
             <img src="@/img/electronic-arts-logo.jpg" 
-            class="footer__logos-img" alt="EA">
+            class="footer-logos__image" alt="EA">
         </a>
-        <a href="https://www.rockstargames.com/" target="_blank" class="footer__logos-item">
-            <img src="@/img//rockstar-games-logo.png" 
-            class="footer__logos-img" alt="rc games">
+        <a href="https://www.rockstargames.com/" target="_blank" class="footer-logos__link">
+            <img src="@/img/rockstar-games-logo.png" 
+            class="footer-logos__image" alt="rc games">
         </a>
-        <a href="https://www.ubisoft.com/" target="_blank" class="footer__logos-item">
-            <img src="@/img//ubisoft-logo.png" 
-            class="footer__logos-img" alt="ubisoft">
+        <a href="https://www.ubisoft.com/" target="_blank" class="footer-logos__link">
+            <img src="@/img/ubisoft-logo.png" 
+            class="footer-logos__image" alt="ubisoft">
         </a>
     </div>
 </template>
@@ -22,20 +22,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.footer__logos {
+.footer-logos {
     text-align: center;
     padding-top: 15px;
-
-    &-item {
+    
+    &__link {
         margin: 0 10px 0 10px;
     }
 
-    &-img {
-        height: 50px;
+    &__image {
+        max-width: 3.5%;
     }
 
-    &-item:hover,
-    &-item:focus {
+    &__link:hover,
+    &__link:focus {
         border-bottom: 5px solid #9833CC;
     }
 }

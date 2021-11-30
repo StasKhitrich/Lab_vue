@@ -1,6 +1,6 @@
 <template>
 <header-navigation/>
-  <div class="main_content">
+  <div class="main-content">
     <router-view></router-view>
   </div>
   <footer-slogan/>
@@ -21,3 +21,11 @@ export default class App extends Vue {
   
 }
 </script>
+
+<style lang="scss" scoped>
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+</style>
