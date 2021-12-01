@@ -10,8 +10,8 @@
 import { Options, Vue } from 'vue-class-component';
 import HeaderNavigation from '@/components/HeaderNavigation.vue';
 import Footer from '@/components/Footer.vue';
-import './assets/main-styles.scss';
 import './assets/normalize.css';
+import './assets/main-styles.scss';
 
   @Options({
     components: {
