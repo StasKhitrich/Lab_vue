@@ -17,7 +17,7 @@
 
 <script>
 export default {
-        
+
 }
 </script>
 
@@ -25,7 +25,7 @@ export default {
 .footer-logos {
     text-align: center;
     padding-top: 15px;
-    
+
     &__link {
         margin: 0 10px 0 10px;
     }

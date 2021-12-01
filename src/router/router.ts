@@ -26,7 +26,7 @@ const routes = [
 const router = createRouter({
   routes,
   history: createWebHistory(process.env.Base_URL),
-  linkActiveClass: 'active'
+  linkActiveClass: 'header__navigation-link--active'
 })
 
 export default router;
