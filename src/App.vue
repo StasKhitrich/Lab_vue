@@ -12,6 +12,7 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue';
 import Footer from '@/components/Footer.vue';
 import './assets/normalize.css';
 import './assets/main-styles.scss';
+import './assets/colors.scss';
 
   @Options({
     components: {
@@ -23,6 +24,3 @@ export default class App extends Vue {
 
 }
 </script>
-
-<style lang="scss" scoped>
-</style>

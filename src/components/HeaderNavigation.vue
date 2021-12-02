@@ -18,11 +18,43 @@
 </script>
 
 <style lang="scss">
-    @import "src/assets/colors";
     .header {
-        background-color: $color-purple;
+        background-color: $color-black;
         height: 65px;
         vertical-align: middle;
+
+        &__navigation {
+            display: inherit;
+            width: 25%;
+
+            &-link {
+            font-size: 23px;
+            font-weight: 500;
+            color: $color-gray;
+            width: 30%;
+            height: 100%;
+            text-align: center;
+            line-height: 65px;
+            text-decoration: none;
+            margin: 0 auto;
+            
+            &:focus {
+                color: $color-purple;
+            }
+
+            &:hover {
+                border-bottom: 5px solid $color-purple;
+                background-color: $bg-navigation-hover;
+                height: 60px;
+                color: $color-white;
+            }
+
+            &--active {
+                color: $color-purple;
+                height: 60px;
+            }
+        }
+        }
 
         &__inner-wrap {
             display: flex;
@@ -35,37 +67,14 @@
         &__logo-link {
             font-size: 40px;
             font-weight: 500;
-            color: #CECDCE;
+            color: $color-gray;
             height: 100%;
             line-height: 65px;
             text-decoration: none;
 
             &:hover,
             &:focus {
-                color: #b298be;
-            }
-        }
-
-        &__navigation-link {
-            font-size: 40px;
-            font-weight: 500;
-            color: #CECDCE;
-            height: 100%;
-            line-height: 65px;
-            text-decoration: none;
-            padding-left: 10px;
-
-            &:hover,
-            &:focus {
-                border-bottom: 5px solid #9833CC;
-                background-color: #272727;
-                height: 60px;
-                color: white;
-            }
-
-            &--active {
-                color: #9833CC;
-                height: 60px;
+                color: $color-purple;
             }
         }
     }

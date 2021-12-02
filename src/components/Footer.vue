@@ -1,23 +1,26 @@
 <template>
     <div class="footer">
-        <FooterLogols/>
+      <div class="footer__slogan">
+        Incredible Convenient
+      </div>
+      <FooterLogos/>
     </div>
 </template>
 
 <script lang="ts">
-import FooterLogols from './Footer-logos.vue'
+import FooterLogos from './FooterLogos.vue'
 
 export default {
   components: {
-    FooterLogols
+    FooterLogos
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .footer {
-    background-color: black;
-    color: #9833CC;
+    background-color: $color-black;
+    color: $color-purple;
     width: 100%;
     height: 140px;
     bottom: 0;

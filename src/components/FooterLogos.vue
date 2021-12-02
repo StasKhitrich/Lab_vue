@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .footer-logos {
     text-align: center;
     padding-top: 15px;
@@ -36,7 +36,7 @@ export default {
 
     &__link:hover,
     &__link:focus {
-        border-bottom: 5px solid #9833CC;
+        border-bottom: 5px solid $color-purple;
     }
 }
 </style>
