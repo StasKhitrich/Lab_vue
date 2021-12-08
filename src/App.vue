@@ -1,43 +1,53 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <IndexPage :title="userFullName" />
-  <ApiDemoPage />
+  <div class="app__wrapper">
+    <div class="app__header">
+      <Header />
+    </div>
+    <div class="app__content">
+      <router-view />
+    </div>
+    <div class="app__footer">
+      <Footer />
+    </div>
+  </div>
 </template>
 
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import IndexPage from '@/pages/IndexPage.vue';
-import ApiDemoPage from '@/pages/ApiDemoPage.vue';
+<script>
+import { mapActions } from 'vuex';
+import Header from './components/header/Header.vue';
+import Footer from './components/footer/Footer.vue';
+import saveDataToStore from './services/persist';
 
-@Options({
+export default {
+  name: 'App',
   components: {
-    IndexPage,
-    ApiDemoPage
+    Header,
+    Footer
   },
-})
-export default class App extends Vue {
-  user: any = null;
-
-  async mounted(): Promise<void> {
-    const resp = await fetch('http://localhost:3000/users/1').then((response) => response.json());
-    this.user = resp || null;
-  }
-
-  get userFullName() {
-    return this.user
-      ? `Default user: ${this.user.first_name} ${this.user.last_name}`
-      : ''
+  mounted() {
+    saveDataToStore();
+    this.fetchProducts();
+    this.fetchUsers();
+  },
+  methods: {
+    ...mapActions({
+      fetchProducts: 'fetchProducts',
+      fetchUsers: 'fetchUsers'
+    })
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import '../public/styles.scss';
+@import '../colors.scss';
+@import '../fonts.scss';
+* {
+  margin: 0;
+  padding: 0;
+}
+.app__content {
+  min-height: calc(100vh - 120px);
+  background: url("https://wallpaperaccess.com/full/1188236.jpg");
 }
 </style>
