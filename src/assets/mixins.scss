@@ -1,0 +1,12 @@
+@mixin alert {
+  display: block;
+  position: absolute;
+  align-items: center;
+  width: 40%;
+  top: 1.5%;
+  left: 30%;
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+  color: $color-white;
+}

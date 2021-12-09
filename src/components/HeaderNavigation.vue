@@ -44,7 +44,7 @@
 
             &:hover {
                 border-bottom: 5px solid $color-purple;
-                background-color: $bg-navigation-hover;
+                background-color: $navigation-bg-hover;
                 height: 60px;
                 color: $color-white;
             }

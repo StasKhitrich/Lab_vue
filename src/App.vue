@@ -1,7 +1,7 @@
 <template>
     <HeaderNavigation/>
     <div class="content">
-        <router-view></router-view>
+      <router-view/>
     </div>
     <Footer/>
 </template>
@@ -10,6 +10,7 @@
 import { Options, Vue } from 'vue-class-component';
 import HeaderNavigation from '@/components/HeaderNavigation.vue';
 import Footer from '@/components/Footer.vue';
+import ErrorBoundary from '@/components/ErrorBoundary.vue'
 import './assets/normalize.css';
 import './assets/main-styles.scss';
 import './assets/colors.scss';
@@ -17,10 +18,11 @@ import './assets/colors.scss';
   @Options({
     components: {
       HeaderNavigation,
-      Footer
+      Footer,
+      ErrorBoundary
     }
   })
+  
 export default class App extends Vue {
-
 }
 </script>
