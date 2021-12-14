@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from '@/router/router'
 import './assets/main-styles.scss'
+import './categories'
 
 const app = createApp(App).use(router);
 

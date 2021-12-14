@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
-import FooterLogos from './FooterLogos.vue'
+import FooterLogos from './Logo-components/FooterLogos.vue';
 
 @Options({
   components: {

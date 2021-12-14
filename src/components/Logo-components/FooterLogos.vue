@@ -1,22 +1,24 @@
 <template>
-    <div class="footer-logos">
+<div class="footer-logos">
         <a href="https://www.ea.com/" target="_blank" class="footer-logos__link">
-            <img src="@/img/electronic-arts-logo.jpg" 
+            <img src="@/img/game-companies/electronic-arts-logo.jpg" 
             class="footer-logos__image" alt="EA">
         </a>
         <a href="https://www.rockstargames.com/" target="_blank" class="footer-logos__link">
-            <img src="@/img/rockstar-games-logo.png" 
+            <img src="@/img/game-companies/rockstar-games-logo.png" 
             class="footer-logos__image" alt="rc games">
         </a>
         <a href="https://www.ubisoft.com/" target="_blank" class="footer-logos__link">
-            <img src="@/img/ubisoft-logo.png" 
+            <img src="@/img/game-companies/ubisoft-logo.png" 
             class="footer-logos__image" alt="ubisoft">
         </a>
     </div>
 </template>
 
 <script>
-export default {
+import { Options, Vue } from 'vue-class-component'
+
+export default class FooterLogos extends Vue {
 
 }
 </script>
